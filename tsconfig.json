@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@theme/*": ["packages/.vitepress/theme/*"]
+    }
+  },
+  "include": [
+    "packages/.vitepress/components/*.vue",
+    "packages/.vitepress/*.ts",
+    "metadata/*.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.md",
+    "**/dist",
+  ]
+}
