@@ -1,15 +1,34 @@
 import { defineConfig } from "vite";
 import UnoCSS from "unocss/vite";
+import { MarkdownTransform } from "./.vitepress/plugin/markdownTransform";
+import Inspect from "vite-plugin-inspect";
+import Components from "unplugin-vue-components/vite";
+import IconsResolver from "unplugin-icons/resolver";
 
 import { resolve } from "node:path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [UnoCSS()],
+  plugins: [
+    UnoCSS(),
+    MarkdownTransform(),
+    Inspect(),
+    Components({
+      dirs: resolve(__dirname, ".vitepress/theme/components"),
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        IconsResolver({
+          componentPrefix: "",
+        }),
+      ],
+      dts: "./.vitepress/components.d.ts",
+      transformer: "vue3",
+    }),
+  ],
   server: {},
   resolve: {
     alias: {
-      "@vueuse/core": resolve(__dirname, "core/index.ts"),
+      "@saile/component": resolve(__dirname, "core/index.ts"),
     },
   },
 });

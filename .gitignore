@@ -2,7 +2,7 @@
 node_modules/
 
 dist/
-
-packages/.vitepress/dist
-packages/.vitepress/cache
-packages/.vitepress/.temp
+cache
+.vitepress/cache
+.temp
+components.d.ts
