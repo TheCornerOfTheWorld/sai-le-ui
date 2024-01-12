@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import UnoCSS from "unocss/vite";
 import { MarkdownTransform } from "./.vitepress/plugin/markdownTransform";
 import Inspect from "vite-plugin-inspect";
-import Components from "unplugin-vue-components/vite";
+import Components from "unplugin-vue-components/vite"; // On-demand components auto importing for Vue.
 import IconsResolver from "unplugin-icons/resolver";
 
 import { resolve } from "node:path";
