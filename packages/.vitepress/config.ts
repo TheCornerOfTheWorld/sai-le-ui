@@ -19,6 +19,7 @@ export default defineConfig({
           { text: "Runtime API Examples", link: "/api-examples" },
           { text: "Button", link: "/core/Button/index" },
           { text: "Input", link: "/core/Input/index" },
+          { text: "Select", link: "/core/Select/index" },
           // { text: "Collapse", link: "/core/Collapse/index" },
         ],
       },

@@ -10,7 +10,7 @@
     "vue"
   ],
   "dependencies": {
-    "vue-demi": ">=0.14.5"
+    "vue-demi": "^0.14.6"
   },
   "author": "",
   "license": "ISC"

@@ -91,6 +91,9 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.3.4
+      vue-demi:
+        specifier: 0.14.5
+        version: 0.14.5(vue@3.3.4)
       vue2:
         specifier: npm:vue@^2.7.14
         version: /vue@2.7.16
@@ -100,6 +103,8 @@ importers:
       vue-demi:
         specifier: 0.14.5
         version: 0.14.5(vue@3.3.4)
+
+  packages/utils: {}
 
 packages:
 

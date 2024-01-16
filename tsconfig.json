@@ -14,12 +14,11 @@
       "@theme/*": ["packages/.vitepress/theme/*"],
       "@saileui/core/*": ["packages/core/*"],
     },
-    "types": ["vitest",]
   },
   "include": [
     "packages",
-    "packages/.vitepress/components/*.vue",
-    "packages/.vitepress/*.ts",
+    "packages/**.vue",
+    "packages/**.ts",
     "metadata/*.ts",
     "script/*.ts",
   ],

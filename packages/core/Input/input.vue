@@ -1,7 +1,14 @@
 <template>
   <input type="text" v-model="inputVal" />
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import { ref } from "vue-demi";
-const inputVal = ref<string>("");
+export default {
+  name: "input",
+  props: {},
+  setup() {
+    const inputVal = ref<string>("");
+    return { inputVal };
+  },
+};
 </script>
