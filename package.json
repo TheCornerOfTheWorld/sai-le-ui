@@ -1,22 +1,35 @@
 {
-  "name": "saile-ui",
+  "name": "saile-ui-01",
   "version": "1.0.0",
   "description": "",
   "packageManager": "pnpm@8.6.10",
-  "private": true,
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/saile.cjs",
+  "types": "dist/lib/saile.d.ts",
   "scripts": {
     "docs": "vitepress dev packages",
     "docs:build": "vitepress build packages",
-    "docs:preview": "vitepress preview packages"
+    "docs:preview": "vitepress preview packages",
+    "package": "rollup -c"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^16.9.1",
+    "esbuild-register": "^3.5.0",
     "eslint": "8.45.0",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
+    "rollup": "^4.9.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.69.7",
     "simple-git": "^3.19.1",
     "simple-git-hooks": "^2.9.0",
     "typescript": "5.1.6",
