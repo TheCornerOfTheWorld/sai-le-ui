@@ -28,7 +28,8 @@ export default defineConfig({
   server: {},
   resolve: {
     alias: {
-      "@saile/component": resolve(__dirname, "core/index.ts"),
+      "@saile/core": resolve(__dirname, "core"),
+      "@saile/utils": resolve(__dirname, "utils"),
     },
   },
 });

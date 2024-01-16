@@ -18,6 +18,8 @@ export default defineConfig({
           { text: "Markdown Examples", link: "/markdown-examples" },
           { text: "Runtime API Examples", link: "/api-examples" },
           { text: "Button", link: "/core/Button/index" },
+          { text: "Input", link: "/core/Input/index" },
+          // { text: "Collapse", link: "/core/Collapse/index" },
         ],
       },
     ],
