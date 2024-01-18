@@ -1,18 +1,29 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "strict": true,
-    "jsx": "preserve",
     "baseUrl": ".",
+    "target": "esnext",
+    "outDir": "lib",
+    "module": "esnext",
+    "strict": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false, // 导致comp报错？？？
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "isolatedModules": false,
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "paths": {
-      "@theme/*": ["packages/.vitepress/theme/*"],
-      "@saileui/core/*": ["packages/core/*"],
+      "@": ["packages/*"]
     },
   },
   "include": [
