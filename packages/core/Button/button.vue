@@ -1,19 +1,19 @@
 <template>
-  <button class="gulu-button" :class="classes" :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"></span>
+  <button class="saile-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="saile-loadingIndicator"></span>
     <slot />
   </button>
 </template>
 <script lang="ts" setup>
 import { computed, toRefs } from "vue-demi";
-type Props = {
+type ButtonProps = {
   theme?: "button" | "text" | "link";
   size?: "normal" | "big" | "small";
   level?: "normal" | "main" | "danger";
-  disabled: boolean;
-  loading: boolean;
+  disabled?: boolean;
+  loading?: boolean;
 };
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   theme: "button",
   size: "normal",
   level: "normal",
@@ -24,9 +24,9 @@ const props = withDefaults(defineProps<Props>(), {
 const { theme, size, level } = toRefs(props);
 const classes = computed(() => {
   return {
-    [`gulu-theme-${theme}`]: theme,
-    [`gulu-size-${size}`]: size,
-    [`gulu-level-${level}`]: level,
+    [`saile-theme-${theme.value}`]: theme.value,
+    [`saile-size-${size.value}`]: size.value,
+    [`saile-level-${level.value}`]: level.value,
   };
 });
 </script>
@@ -38,7 +38,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.gulu-button {
+.saile-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -67,7 +67,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.gulu-theme-link {
+  &.saile-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -76,7 +76,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.gulu-theme-text {
+  &.saile-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -85,18 +85,18 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.gulu-size-big {
+  &.saile-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.gulu-size-small {
+  &.saile-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.gulu-theme-button {
-    &.gulu-level-main {
+  &.saile-theme-button {
+    &.saile-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -106,7 +106,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.gulu-level-danger {
+    &.saile-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -117,8 +117,8 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-link {
-    &.gulu-level-danger {
+  &.saile-theme-link {
+    &.saile-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -126,15 +126,15 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-text {
-    &.gulu-level-main {
+  &.saile-theme-text {
+    &.saile-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.gulu-level-danger {
+    &.saile-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -142,7 +142,7 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-button {
+  &.saile-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -151,14 +151,14 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-link,
-  &.gulu-theme-text {
+  &.saile-theme-link,
+  &.saile-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .gulu-loadingIndicator {
+  > .saile-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -167,10 +167,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: gulu-spin 1s infinite linear;
+    animation: saile-spin 1s infinite linear;
   }
 }
-@keyframes gulu-spin {
+@keyframes saile-spin {
   0% {
     transform: rotate(0deg);
   }
