@@ -1,5 +1,20 @@
-import { defineConfig } from "unocss";
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from "unocss";
 
 export default defineConfig({
-  rules: [["m-1", { margin: "1px" }]],
+  presets: [
+    presetAttributify(),
+    presetUno(),
+    presetIcons({
+      scale: 1.2,
+      warn: true,
+    }),
+  ],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 });
