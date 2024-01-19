@@ -7,27 +7,21 @@
     "strict": true,
     "declaration": true,
     "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": false, // 导致comp报错？？？
+    "strictNullChecks": false,
     "removeComments": true,
-    "resolveJsonModule": true,
-    "importHelpers": true,
     "isolatedModules": false,
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "experimentalDecorators": true,
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "skipLibCheck": true,
 
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "lib": ["esnext", "dom"],
     "paths": {
       "@": ["packages/*"]
     },
   },
   "include": [
-    "packages",
     "packages/**.vue",
     "packages/**.ts",
     "metadata/*.ts",

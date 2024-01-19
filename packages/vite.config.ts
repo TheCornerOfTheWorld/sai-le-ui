@@ -28,8 +28,8 @@ export default defineConfig({
   server: {},
   resolve: {
     alias: {
-      "@saile/core": resolve(__dirname, "core"),
-      "@saile/utils": resolve(__dirname, "utils"),
+      "@SaiLe/core": resolve(__dirname, "core"),
+      "@SaiLe/utils": resolve(__dirname, "utils"),
     },
   },
 });

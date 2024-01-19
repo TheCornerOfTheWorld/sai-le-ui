@@ -28,7 +28,7 @@ export function getFunctionMarkdown(pkg: string, name: string) {
 
 export function MarkdownTransform(): Plugin {
   return {
-    name: "saile-md-transform",
+    name: "sai-le-md-transform",
     enforce: "pre",
     async transform(code, id) {
       if (!id.match(/\.md\b/)) {

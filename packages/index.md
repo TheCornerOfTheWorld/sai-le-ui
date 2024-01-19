@@ -3,16 +3,13 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "My Awesome Amazing Sei Le Ui Components"
+  text: "Introduction and use of Components"
+  tagline: amazing ✨
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 开始
+      link: /core/start
 
 features:
   - title: Feature A
@@ -22,4 +19,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

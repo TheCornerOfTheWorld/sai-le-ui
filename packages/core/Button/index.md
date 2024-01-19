@@ -1,11 +1,18 @@
 # Button
 
+## Install
+
+```bash
+pnpm i SaiLe-Ui
+```
+
+```ts
+import { Button } from "SaiLe-Ui";
+```
+
 ## Usage
 
 ```html
-<script setup>
-  import { Button } from "Saile-Ui";
-</script>
 <template>
   <div class="pt-3">
     <button theme="button">默认按钮</button>

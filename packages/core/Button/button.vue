@@ -1,6 +1,6 @@
 <template>
-  <button class="saile-button" :class="classes" :disabled="disabled">
-    <span v-if="loading" class="saile-loadingIndicator"></span>
+  <button class="sai-le-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="sai-le-loadingIndicator"></span>
     <slot />
   </button>
 </template>
@@ -24,9 +24,9 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 const { theme, size, level } = toRefs(props);
 const classes = computed(() => {
   return {
-    [`saile-theme-${theme.value}`]: theme.value,
-    [`saile-size-${size.value}`]: size.value,
-    [`saile-level-${level.value}`]: level.value,
+    [`sai-le-theme-${theme.value}`]: theme.value,
+    [`sai-le-size-${size.value}`]: size.value,
+    [`sai-le-level-${level.value}`]: level.value,
   };
 });
 </script>
@@ -38,7 +38,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.saile-button {
+.sai-le-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -67,7 +67,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.saile-theme-link {
+  &.sai-le-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -76,7 +76,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.saile-theme-text {
+  &.sai-le-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -85,18 +85,18 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.saile-size-big {
+  &.sai-le-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.saile-size-small {
+  &.sai-le-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.saile-theme-button {
-    &.saile-level-main {
+  &.sai-le-theme-button {
+    &.sai-le-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -106,7 +106,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.saile-level-danger {
+    &.sai-le-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -117,8 +117,8 @@ $grey: grey;
       }
     }
   }
-  &.saile-theme-link {
-    &.saile-level-danger {
+  &.sai-le-theme-link {
+    &.sai-le-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -126,15 +126,15 @@ $grey: grey;
       }
     }
   }
-  &.saile-theme-text {
-    &.saile-level-main {
+  &.sai-le-theme-text {
+    &.sai-le-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.saile-level-danger {
+    &.sai-le-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -142,7 +142,7 @@ $grey: grey;
       }
     }
   }
-  &.saile-theme-button {
+  &.sai-le-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -151,14 +151,14 @@ $grey: grey;
       }
     }
   }
-  &.saile-theme-link,
-  &.saile-theme-text {
+  &.sai-le-theme-link,
+  &.sai-le-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .saile-loadingIndicator {
+  > .sai-le-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -167,10 +167,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: saile-spin 1s infinite linear;
+    animation: sai-le-spin 1s infinite linear;
   }
 }
-@keyframes saile-spin {
+@keyframes sai-le-spin {
   0% {
     transform: rotate(0deg);
   }

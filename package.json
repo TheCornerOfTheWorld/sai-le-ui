@@ -1,5 +1,5 @@
 {
-  "name": "saile-ui-01",
+  "name": "sai-le-ui-01",
   "version": "1.0.0",
   "description": "",
   "packageManager": "pnpm@8.6.10",
@@ -13,8 +13,8 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "main": "dist/lib/saile.cjs",
-  "types": "dist/lib/saile.d.ts",
+  "main": "dist/lib/sai-le.cjs",
+  "types": "dist/lib/sai-le.d.ts",
   "scripts": {
     "docs": "vitepress dev packages",
     "docs:build": "vitepress build packages",

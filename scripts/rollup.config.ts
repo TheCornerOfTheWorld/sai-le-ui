@@ -18,8 +18,8 @@ export default defineConfig([
   {
     input,
     output: [
-      { file: "dist/lib/saile.cjs", format: "cjs" },
-      { file: "dist/lib/saile.mjs", format: "es" },
+      { file: "dist/lib/sai-le.cjs", format: "cjs" },
+      { file: "dist/lib/sai-le.mjs", format: "es" },
     ],
     plugins: [
       scss({ include: /\.scss$/, sass: dartSass }),

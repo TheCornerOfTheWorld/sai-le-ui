@@ -1,22 +1,24 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "SaiLe Ui 组件",
+  description: "'塞雷'的组件库",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Introduction", link: "/core/start" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "开始",
+        items: [{ text: "安装", link: "/core/start" }],
+      },
+      {
+        text: "介绍",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          // { text: "Markdown Examples", link: "/markdown-examples" },
+          // { text: "Runtime API Examples", link: "/api-examples" },
           { text: "Button", link: "/core/Button/index" },
           { text: "Input", link: "/core/Input/index" },
           { text: "Select", link: "/core/Select/index" },
