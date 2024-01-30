@@ -3,6 +3,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "SaiLe Ui 组件",
   description: "'塞雷'的组件库",
+  base: "/sai-le-ui/zh/",
+  lang: "zh",
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
