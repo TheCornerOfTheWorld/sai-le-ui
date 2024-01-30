@@ -52,10 +52,13 @@ jobs:
       - name: Build
         run: pnpm run docs:build
 
-      - uses: actions/configure-pages@v2
-      - uses: actions/upload-pages-artifact@v1
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./packages/.vitepress/dist
-      - name: Deploy
+          # Upload entire repository
+          path: "./packages/.vitepress/dist"
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
