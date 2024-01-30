@@ -2,7 +2,7 @@
 category: Component
 ---
 
-# 输入框
+# Select
 
 ## Usage
 

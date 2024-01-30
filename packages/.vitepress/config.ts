@@ -17,18 +17,20 @@ export default defineConfig({
       {
         text: "介绍",
         items: [
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
-          { text: "Button", link: "/core/Button/index" },
-          { text: "Input", link: "/core/Input/index" },
-          { text: "Select", link: "/core/Select/index" },
-          // { text: "Collapse", link: "/core/Collapse/index" },
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Input", link: "/core/Input/" },
+          { text: "Button", link: "/core/Button/" },
+          { text: "Select", link: "/core/Select/" },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      {
+        icon: "github",
+        link: "https://github.com/TheCornerOfTheWorld/sai-le-ui",
+      },
     ],
   },
 });
